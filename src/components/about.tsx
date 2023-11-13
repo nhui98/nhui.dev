@@ -94,7 +94,7 @@ const aboutText = [
 export function About() {
   return (
     <div className="pt-[111px]">
-      <h1 className="text-4xl font-bold text-gray-100">Hello!</h1>
+      <h1 className="text-4xl font-semibold text-gray-100">Hello!</h1>
 
       <div className="relative -z-10">
         <Box className="absolute" />

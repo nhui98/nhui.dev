@@ -27,7 +27,7 @@ export function Experience() {
   return (
     <div className="pt-[90px]">
       <m.h2
-        className="text-center text-3xl font-bold text-gray-100"
+        className="text-center text-3xl font-semibold text-gray-100"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.6 }}
@@ -77,9 +77,9 @@ function ExperienceCard({
       transition={{ duration: 0.5, delay: 0.6 }}
     >
       <h3 className="text-xl font-medium text-gray-100">{title}</h3>
-      <h4 className="pt-2 text-sm font-semibold text-gray-500">{company}</h4>
+      <h4 className="pt-2 text-sm font-medium text-gray-500">{company}</h4>
       <p className="pt-[11px] text-gray-400">{description}</p>
-      <span className="flex items-center gap-x-2 pt-[11px] text-sm font-semibold text-gray-600 md:hidden">
+      <span className="flex items-center gap-x-2 pt-[11px] font-medium text-gray-600 md:hidden">
         <CalendarIcon className="h-5 w-5 fill-gray-600" /> {workingYears}
       </span>
 
@@ -90,7 +90,7 @@ function ExperienceCard({
           reverse && "left-0 -translate-x-full flex-row-reverse items-start",
         )}
       >
-        <span className="flex items-center gap-x-2 text-sm font-semibold text-gray-600 transition-colors duration-200 group-hover:text-gray-400">
+        <span className="flex items-center gap-x-2 font-medium text-gray-600 transition-colors duration-200 group-hover:text-gray-400">
           <CalendarIcon className="h-5 w-5 fill-gray-600 transition-colors duration-200 group-hover:fill-gray-400" />{" "}
           {workingYears}
         </span>
