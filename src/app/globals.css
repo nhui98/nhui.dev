@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+:root {
+  --box-1: #0307121a;
+  --box-2: #1118271a;
+  --box-3: #1f29371a;
+}
+
 @layer base {
   ::-webkit-scrollbar {
     @apply flex w-2;

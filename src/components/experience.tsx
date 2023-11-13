@@ -18,7 +18,7 @@ export const experiences = [
     title: "Junior Web Developer",
     company: "Red Technology",
     description:
-      "Collaborated with designers and project managers to ship new features for multiple client websites.",
+      "Collaborated with designers and project managers to ship new features for multiple e-commerce websites.",
     workingYears: "2021 - 2022",
   },
 ];
@@ -67,7 +67,7 @@ function ExperienceCard({
   return (
     <m.article
       className={cn(
-        "relative w-full max-w-md border border-gray-200/5 p-6",
+        "group relative w-full max-w-md border border-gray-200/5 bg-black p-6",
         reverse && "ml-auto",
         className,
       )}
@@ -79,27 +79,28 @@ function ExperienceCard({
       <h3 className="text-xl font-medium text-gray-100">{title}</h3>
       <h4 className="pt-2 text-sm font-semibold text-gray-500">{company}</h4>
       <p className="pt-[11px] text-gray-400">{description}</p>
-      <span className="flex items-center gap-x-2 pt-[11px] text-sm font-semibold text-zinc-600 md:hidden">
-        <CalendarIcon className="h-5 w-5 fill-zinc-600" /> {workingYears}
+      <span className="flex items-center gap-x-2 pt-[11px] text-sm font-semibold text-gray-600 md:hidden">
+        <CalendarIcon className="h-5 w-5 fill-gray-600" /> {workingYears}
       </span>
 
       <div
         className={cn(
-          "absolute top-8 hidden items-center gap-x-4 md:flex",
-          !reverse && "right-0 translate-x-full",
-          reverse && "left-0 -translate-x-full flex-row-reverse",
+          "absolute top-8 hidden gap-x-4 gap-y-1 md:flex md:flex-col",
+          !reverse && "right-0 translate-x-full items-end",
+          reverse && "left-0 -translate-x-full flex-row-reverse items-start",
         )}
       >
+        <span className="flex items-center gap-x-2 text-sm font-semibold text-gray-600 transition-colors duration-200 group-hover:text-gray-400">
+          <CalendarIcon className="h-5 w-5 fill-gray-600 transition-colors duration-200 group-hover:fill-gray-400" />{" "}
+          {workingYears}
+        </span>
         <div
           className={cn(
-            "h-0.5 w-16 translate-x-px bg-gray-200/5",
+            "h-0.5 w-52 translate-x-px bg-gray-200/5",
             !reverse && "translate-x-px rounded-r-full",
             reverse && "-translate-x-px rounded-l-full",
           )}
         />
-        <span className="flex items-center gap-x-2 text-sm font-semibold text-zinc-600">
-          <CalendarIcon className="h-5 w-5 fill-zinc-600" /> {workingYears}
-        </span>
       </div>
     </m.article>
   );

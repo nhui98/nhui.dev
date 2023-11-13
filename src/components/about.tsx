@@ -5,6 +5,7 @@ import { Fragment } from "react";
 
 import { cn } from "@/utils";
 
+import { Box } from "./box";
 import { GithubIcon, LinkedinIcon, MailIcon, PdfIcon } from "./icons";
 import { TextLink } from "./text-link";
 
@@ -94,6 +95,11 @@ export function About() {
   return (
     <div className="pt-[111px]">
       <h1 className="text-4xl font-bold text-gray-100">Hello!</h1>
+
+      <div className="relative -z-10">
+        <Box className="absolute" />
+      </div>
+
       {aboutText.map((text, index) => (
         <m.p
           key={index}
@@ -105,6 +111,7 @@ export function About() {
           {text}
         </m.p>
       ))}
+
       <m.div
         className="mt-[28px] grid grid-cols-2 flex-wrap items-center gap-4 sm:inline-flex"
         initial={{ opacity: 0, y: 20 }}
@@ -134,7 +141,7 @@ function SocialLink({ href, text, icon, button }: SocialLinkProps) {
       target="_blank"
       className={cn(
         "group inline-flex w-fit items-center gap-x-1 px-4 py-2 text-sm font-medium",
-        button && "rounded border border-gray-200/10 px-4 py-2",
+        button && "rounded border border-gray-200/10 bg-black px-4 py-2",
       )}
     >
       {icon({

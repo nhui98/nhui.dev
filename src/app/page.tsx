@@ -1,6 +1,6 @@
 "use client";
 
-import { domAnimation, LazyMotion, m } from "framer-motion";
+import { domAnimation, LazyMotion } from "framer-motion";
 
 import { About } from "@/components/about";
 import { Container } from "@/components/container";
