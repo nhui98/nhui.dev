@@ -10,7 +10,7 @@ import { Footer } from "@/components/footer";
 export default function Page() {
   return (
     <LazyMotion features={domAnimation}>
-      <main>
+      <main className="overflow-x-hidden">
         <Container>
           <About />
           <Experience />

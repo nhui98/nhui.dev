@@ -52,12 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          GeistSans.className,
-          "overflow-x-hidden bg-black text-gray-400",
-        )}
-      >
+      <body className={cn(GeistSans.className, "bg-black text-gray-400")}>
         {children}
         <Analytics />
       </body>
