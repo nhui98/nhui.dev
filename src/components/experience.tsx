@@ -79,10 +79,13 @@ function ExperienceCard({
       <h3 className="text-xl font-medium text-gray-100">{title}</h3>
       <h4 className="pt-2 text-sm font-semibold text-gray-500">{company}</h4>
       <p className="pt-[11px] text-gray-400">{description}</p>
+      <span className="flex items-center gap-x-2 pt-[11px] text-sm font-semibold text-zinc-600 md:hidden">
+        <CalendarIcon className="h-5 w-5 fill-zinc-600" /> {workingYears}
+      </span>
 
       <div
         className={cn(
-          "absolute top-8 flex items-center gap-x-4",
+          "absolute top-8 hidden items-center gap-x-4 md:flex",
           !reverse && "right-0 translate-x-full",
           reverse && "left-0 -translate-x-full flex-row-reverse",
         )}

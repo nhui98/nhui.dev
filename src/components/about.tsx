@@ -106,7 +106,7 @@ export function About() {
         </m.p>
       ))}
       <m.div
-        className="mt-[28px] inline-flex items-center gap-x-4"
+        className="mt-[28px] grid grid-cols-2 flex-wrap items-center gap-4 sm:inline-flex"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.45 }}
@@ -133,7 +133,7 @@ function SocialLink({ href, text, icon, button }: SocialLinkProps) {
       href={href}
       target="_blank"
       className={cn(
-        "group inline-flex items-center gap-x-1 text-sm font-medium",
+        "group inline-flex w-fit items-center gap-x-1 px-4 py-2 text-sm font-medium",
         button && "rounded border border-gray-200/10 px-4 py-2",
       )}
     >
