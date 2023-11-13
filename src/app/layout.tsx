@@ -9,7 +9,7 @@ import { cn } from "@/utils";
 const SITE_META_DATA = {
   title: "Nathan Hui",
   description: "Nathan Hui's Portfolio",
-  siteUrl: "https://nhui.dev",
+  siteUrl: process.env.SITE_URL,
   socialBanner: "/banner.png",
 };
 
