@@ -10,7 +10,7 @@ export function FooterLink({ href, icon }: FooterLinkProps) {
     <a href={href} target="_blank">
       {icon({
         className:
-          "h-6 w-6 fill-gray-500 transition-colors duration-200 hover:fill-gray-400",
+          "h-6 w-6 fill-gray-500 transition-colors duration-300 hover:fill-gray-400",
       })}
     </a>
   );

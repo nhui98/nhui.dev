@@ -91,7 +91,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={cn(GeistSans.className, "bg-black text-base text-gray-400")}
+        className={cn(GeistSans.className, "bg-black leading-7 text-gray-400")}
       >
         {children}
         <Analytics />

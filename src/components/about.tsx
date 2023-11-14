@@ -93,7 +93,7 @@ const aboutText = [
 
 export function About() {
   return (
-    <div className="pt-[113px]">
+    <div className="pt-[120px]">
       <h1 className="-translate-x-0.5 text-4xl font-semibold text-gray-100">
         Hello!
       </h1>
@@ -105,7 +105,7 @@ export function About() {
       {aboutText.map((text, index) => (
         <m.p
           key={index}
-          className="pt-[19px] first-of-type:pt-[18px] last-of-type:pt-[20px]"
+          className="pt-5"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: index * 0.15 }}
@@ -115,7 +115,7 @@ export function About() {
       ))}
 
       <m.div
-        className="mt-[27px] grid grid-cols-2 flex-wrap items-center gap-4 sm:inline-flex"
+        className="mt-7 grid grid-cols-2 flex-wrap items-center gap-4 sm:inline-flex"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.45 }}
@@ -148,9 +148,9 @@ function SocialLink({ href, text, icon, button }: SocialLinkProps) {
     >
       {icon({
         className:
-          "h-5 w-5 fill-gray-400 transition-colors duration-200 group-hover:fill-gray-200",
+          "h-5 w-5 fill-gray-400 transition-colors duration-300 group-hover:fill-gray-200",
       })}
-      <span className="text-gray-400 transition-colors duration-200 group-hover:text-gray-200">
+      <span className="text-gray-400 transition-colors duration-300 group-hover:text-gray-200">
         {text}
       </span>
     </a>

@@ -25,7 +25,7 @@ export const experiences = [
 
 export function Experience() {
   return (
-    <div className="pt-[112px]">
+    <div className="pt-[120px]">
       <m.h2
         className="text-center text-3xl font-semibold text-gray-100"
         initial={{ opacity: 0 }}
@@ -36,12 +36,7 @@ export function Experience() {
       </m.h2>
 
       {experiences.map((experience, index) => (
-        <ExperienceCard
-          key={index}
-          {...experience}
-          reverse={index % 2 !== 0}
-          className={cn(index === 0 ? "mt-[41px]" : "mt-8")}
-        />
+        <ExperienceCard key={index} {...experience} reverse={index % 2 !== 0} />
       ))}
     </div>
   );
@@ -66,41 +61,32 @@ function ExperienceCard({
 }: ExperienceCardProps) {
   return (
     <m.article
-      className={cn(
-        "group relative w-full max-w-md rounded-lg border-2 border-gray-200/10 bg-black p-6",
-        reverse && "ml-auto",
-        className,
-      )}
+      className={cn("relative mt-8 w-fit", reverse && "ml-auto", className)}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.6 }}
     >
-      <h3 className="text-sm font-medium text-gray-500">{company}</h3>
-      <h4 className="pt-1 text-xl font-medium text-gray-100">{title}</h4>
-      <p className="pt-[10px] text-gray-400">{description}</p>
-      <span className="flex items-center gap-x-2 pt-[18px] font-medium text-gray-600 md:hidden">
-        <CalendarIcon className="h-5 w-5 fill-gray-600" /> {workingYears}
-      </span>
+      <div className="peer w-full max-w-md rounded-lg border-2 border-transparent px-0 py-6 transition-colors duration-300 md:px-6 md:hover:border-gray-200/10 md:hover:bg-black">
+        <h3 className="text-sm font-medium text-gray-500">{company}</h3>
+        <h4 className="pt-1.5 text-xl font-medium text-gray-100">{title}</h4>
+        <p className="pt-2.5 text-gray-400">{description}</p>
+        <span className="flex items-center gap-x-2 pt-[18px] font-medium text-gray-600 md:hidden">
+          <CalendarIcon className="h-5 w-5 fill-gray-600" /> {workingYears}
+        </span>
+      </div>
 
       <div
         className={cn(
-          "absolute top-8 hidden gap-x-4 gap-y-1 md:flex md:flex-col",
+          "absolute top-8 hidden w-52 gap-x-4 gap-y-1 md:flex md:flex-col [&>span]:peer-hover:text-gray-400 [&_svg]:peer-hover:fill-gray-400",
           !reverse && "right-0 translate-x-full items-end",
           reverse && "left-0 -translate-x-full flex-row-reverse items-start",
         )}
       >
-        <span className="flex items-center gap-x-2 font-medium text-gray-600 transition-colors duration-200 group-hover:text-gray-400">
-          <CalendarIcon className="h-5 w-5 fill-gray-600 transition-colors duration-200 group-hover:fill-gray-400" />
+        <span className="flex items-center gap-x-2 font-medium text-gray-600 transition-colors duration-300 hover:text-gray-400 [&>svg]:fill-gray-600 [&>svg]:hover:fill-gray-400">
+          <CalendarIcon className="h-5 w-5 transition-colors duration-300" />
           {workingYears}
         </span>
-        <div
-          className={cn(
-            "h-0.5 w-52 bg-gray-200/10",
-            !reverse && "translate-x-0.5 rounded-r-full",
-            reverse && "-translate-x-0.5 rounded-l-full",
-          )}
-        />
       </div>
     </m.article>
   );
