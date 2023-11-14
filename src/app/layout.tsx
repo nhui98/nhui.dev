@@ -7,22 +7,52 @@ import type { Metadata } from "next";
 import { cn } from "@/utils";
 
 const SITE_META_DATA = {
+  me: "Nathan Hui",
   title: "Nathan Hui",
   description: "Nathan Hui's Portfolio",
   siteUrl: process.env.SITE_URL,
   socialBanner: "/banner.webp",
+  bannerWidth: 1920,
+  bannerHeight: 1080,
 };
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_META_DATA.siteUrl),
   title: SITE_META_DATA.title,
   description: SITE_META_DATA.description,
+  applicationName: SITE_META_DATA.title,
+  keywords: [
+    "Next.js",
+    "React",
+    "JavaScript",
+    "Typescript",
+    "Tailwind CSS",
+    "Vercel",
+    "Nathan Hui",
+    "Portfolio",
+  ],
+  authors: [{ name: SITE_META_DATA.me }],
+  creator: SITE_META_DATA.me,
+  publisher: SITE_META_DATA.me,
+  generator: "Next.js",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: SITE_META_DATA.title,
     description: SITE_META_DATA.description,
     url: SITE_META_DATA.siteUrl,
     siteName: SITE_META_DATA.title,
-    images: [SITE_META_DATA.socialBanner],
+    images: [
+      {
+        url: SITE_META_DATA.socialBanner,
+        alt: SITE_META_DATA.description,
+        width: SITE_META_DATA.bannerWidth,
+        height: SITE_META_DATA.bannerHeight,
+      },
+    ],
     locale: "en_US",
     type: "website",
   },
@@ -30,7 +60,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_META_DATA.title,
     description: SITE_META_DATA.description,
-    images: [SITE_META_DATA.socialBanner],
+    images: [
+      {
+        url: SITE_META_DATA.socialBanner,
+        alt: SITE_META_DATA.description,
+        width: SITE_META_DATA.bannerWidth,
+        height: SITE_META_DATA.bannerHeight,
+      },
+    ],
   },
   robots: {
     index: true,
