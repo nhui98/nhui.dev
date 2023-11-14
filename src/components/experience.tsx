@@ -67,7 +67,7 @@ function ExperienceCard({
   return (
     <m.article
       className={cn(
-        "group relative w-full max-w-md rounded-lg border-2 border-gray-200/5 bg-black p-6",
+        "group relative w-full max-w-md rounded-lg border-2 border-gray-200/10 bg-black p-6",
         reverse && "ml-auto",
         className,
       )}
@@ -79,7 +79,6 @@ function ExperienceCard({
       <h3 className="text-sm font-medium text-gray-500">{company}</h3>
       <h4 className="pt-1 text-xl font-medium text-gray-100">{title}</h4>
       <p className="pt-[10px] text-gray-400">{description}</p>
-
       <span className="flex items-center gap-x-2 pt-[18px] font-medium text-gray-600 md:hidden">
         <CalendarIcon className="h-5 w-5 fill-gray-600" /> {workingYears}
       </span>
@@ -92,14 +91,14 @@ function ExperienceCard({
         )}
       >
         <span className="flex items-center gap-x-2 font-medium text-gray-600 transition-colors duration-200 group-hover:text-gray-400">
-          <CalendarIcon className="h-5 w-5 fill-gray-600 transition-colors duration-200 group-hover:fill-gray-400" />{" "}
+          <CalendarIcon className="h-5 w-5 fill-gray-600 transition-colors duration-200 group-hover:fill-gray-400" />
           {workingYears}
         </span>
         <div
           className={cn(
-            "h-0.5 w-52 bg-gray-200/5",
-            !reverse && "translate-x-px rounded-r-full",
-            reverse && "-translate-x-px rounded-l-full",
+            "h-0.5 w-52 bg-gray-200/10",
+            !reverse && "translate-x-0.5 rounded-r-full",
+            reverse && "-translate-x-0.5 rounded-l-full",
           )}
         />
       </div>
