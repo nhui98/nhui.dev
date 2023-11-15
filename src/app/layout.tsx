@@ -5,7 +5,6 @@ import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 
-import { Footer } from "@/components/footer";
 import { MotionProvider } from "@/components/motion-provider";
 
 const SITE_META_DATA = {
