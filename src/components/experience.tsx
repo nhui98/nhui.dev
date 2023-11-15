@@ -1,8 +1,7 @@
 "use client";
 
+import cn from "@nhui/cn";
 import { m } from "framer-motion";
-
-import { cn } from "@/utils";
 
 import { CalendarIcon } from "./icons";
 
@@ -30,7 +29,7 @@ export function Experience() {
         className="text-center text-3xl font-semibold text-gray-100"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.6 }}
+        transition={{ duration: 0.5, delay: 0.45 }}
       >
         My Experience
       </m.h2>
@@ -65,12 +64,12 @@ function ExperienceCard({
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: 0.6 }}
+      transition={{ duration: 0.5, delay: 0.45 }}
     >
       <div className="peer w-full max-w-md rounded-lg border-2 border-transparent px-0 py-6 transition-colors duration-300 md:px-6 md:hover:border-gray-200/10 md:hover:bg-black">
         <h3 className="text-sm font-medium text-gray-500">{company}</h3>
         <h4 className="pt-1.5 text-xl font-medium text-gray-100">{title}</h4>
-        <p className="pt-2.5 text-gray-400">{description}</p>
+        <p className="pt-2.5">{description}</p>
         <span className="flex items-center gap-x-2 pt-[18px] font-medium text-gray-600 md:hidden">
           <CalendarIcon className="h-5 w-5 fill-gray-600" /> {workingYears}
         </span>

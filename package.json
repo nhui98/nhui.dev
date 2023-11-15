@@ -10,8 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@nhui/cn": "^0.1.0",
     "@vercel/analytics": "^1.1.1",
-    "clsx": "^2.0.0",
     "framer-motion": "^10.16.4",
     "geist": "^1.1.0",
     "next": "14.0.2",
@@ -31,7 +31,6 @@
     "postcss": "^8",
     "prettier": "^3.1.0",
     "prettier-plugin-tailwindcss": "^0.5.7",
-    "tailwind-merge": "^2.0.0",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   }

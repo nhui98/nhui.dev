@@ -1,10 +1,12 @@
 import "./globals.css";
 
+import cn from "@nhui/cn";
 import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 
-import { cn } from "@/utils";
+import { Footer } from "@/components/footer";
+import { MotionProvider } from "@/components/motion-provider";
 
 const SITE_META_DATA = {
   me: "Nathan Hui",
@@ -93,7 +95,7 @@ export default function RootLayout({
       <body
         className={cn(GeistSans.className, "bg-black leading-7 text-gray-400")}
       >
-        {children}
+        <MotionProvider>{children}</MotionProvider>
         <Analytics />
       </body>
     </html>

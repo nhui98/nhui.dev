@@ -1,9 +1,8 @@
 "use client";
 
+import cn from "@nhui/cn";
 import { m } from "framer-motion";
 import { Fragment } from "react";
-
-import { cn } from "@/utils";
 
 import { Box } from "./box";
 import { GithubIcon, LinkedinIcon, MailIcon, PdfIcon } from "./icons";
@@ -142,17 +141,15 @@ function SocialLink({ href, text, icon, button }: SocialLinkProps) {
       href={href}
       target="_blank"
       className={cn(
-        "group inline-flex w-fit items-center gap-x-1 px-4 py-2 text-sm font-medium",
-        button && "rounded border border-gray-200/10 bg-black px-4 py-2",
+        "group inline-flex w-fit items-center gap-x-1 px-4 py-2 text-sm font-medium transition-colors duration-300 hover:text-gray-200",
+        button && "rounded border border-gray-200/10 bg-black",
       )}
     >
       {icon({
         className:
           "h-5 w-5 fill-gray-400 transition-colors duration-300 group-hover:fill-gray-200",
       })}
-      <span className="text-gray-400 transition-colors duration-300 group-hover:text-gray-200">
-        {text}
-      </span>
+      {text}
     </a>
   );
 }

@@ -1,4 +1,4 @@
-import { cn } from "@/utils";
+import cn from "@nhui/cn";
 
 type TextLinkProps = {
   children: React.ReactNode;
